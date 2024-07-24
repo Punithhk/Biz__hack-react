@@ -1,0 +1,35 @@
+/**
+ * ProposalItem.css
+ *
+ * @format
+ */
+
+.proposal-item {
+  margin: 10px 0;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.proposal-item.approved {
+  background-color: #e0f7fa;
+  border-color: #00acc1;
+}
+
+.proposal-item.not-approved {
+  background-color: #ffebee;
+  border-color: #f44336;
+}
+
+.approve-button {
+  background-color: #4caf50;
+  color: white;
+}
+
+.disapprove-button {
+  background-color: #f44336;
+  color: white;
+}

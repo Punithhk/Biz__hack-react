@@ -1,23 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+/** @format */
+
+import React from "react";
+import { Route, Routes } from "react-router-dom";
+import Navbar from "./components/Navbar";
+import NotificationForm from "./components/NotificationForm";
+import ProposalList from "./components/ProposalList";
+import "./App.css";
+
+const Home = () => <h2>Home Page</h2>;
+const NotFound = () => <h2>404 - Not Found</h2>;
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/notifications" element={<NotificationForm />} />
+        <Route path="/proposals" element={<ProposalList />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
     </div>
   );
 }
